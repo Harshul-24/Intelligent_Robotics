@@ -1,0 +1,74 @@
+#VRML_SIM R2022b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/fruits/protos/Apple.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+IMPORTABLE EXTERNPROTO "../protos/Pioneer_DistanceSensor.proto"
+
+WorldInfo {
+  FPS 30
+}
+Viewpoint {
+  orientation -0.5367391635516328 0.12554593615968843 0.8343556125679752 2.756123309039286
+  position 1.5173124828997742 -0.19920937456491064 3.1060260165988196
+}
+TexturedBackground {
+  texture "dawn_cloudy_empty"
+}
+TexturedBackgroundLight {
+  castShadows FALSE
+}
+RectangleArena {
+  floorSize 2 2
+  floorTileSize 0.25 0.25
+}
+DEF wall_4 Wall {
+  translation -0.1 0.2 0
+  name "wall(3)"
+  size 0.5 0.02 0.15
+}
+DEF wall_5 Wall {
+  translation 0.2 0.8 0
+  name "wall(4)"
+  size 1.1 0.02 0.15
+}
+DEF wall_1 Wall {
+  translation 0.2 -0.4 0
+  name "wall(1)"
+  size 1.1 0.02 0.15
+}
+Apple {
+  translation -0.1 0.5 0.05
+}
+E-puck {
+  translation -0.132623 -0.535698 1.77636e-15
+  controller "bug0"
+  turretSlot [
+    DEF mid_gps GPS {
+      name "mid_gps"
+    }
+    DEF front_gps GPS {
+      translation 0.04 0 0
+      name "front_gps"
+    }
+  ]
+}
+DEF wall_3 Wall {
+  translation -0.34 0.5 0
+  name "wall(2)"
+  size 0.02 0.6 0.15
+}
+DEF wall_2 Wall {
+  translation -0.34 -0.25 0
+  name "wall(6)"
+  size 0.02 0.3 0.15
+}
+DEF wall_6 Wall {
+  translation 0.74 0.2 0
+  rotation 0 1 0 0
+  name "wall(5)"
+  size 0.02 1.2 0.15
+}
